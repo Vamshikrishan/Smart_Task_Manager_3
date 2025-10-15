@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Register | Smart Task Manager</title>
+  <link rel="icon" type="image/png" href="logo.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="login-body">
+  <div class="login-container">
+    <img src="istockphoto-1314338734-612x612.jpg" alt="App Logo" class="login-logo">
+    <h1>Create Account 🧾</h1>
+    <p class="login-sub">Join Smart Task Manager today!</p>
+
+    <form id="registerForm" class="login-form">
+      <input type="text" id="regUsername" placeholder="Username" required>
+      <input type="email" id="regEmail" placeholder="Email" required>
+      <input type="password" id="regPassword" placeholder="Password" required>
+      <input type="password" id="regConfirmPassword" placeholder="Confirm Password" required>
+      <button type="submit">Register</button>
+      <p class="error-msg" id="registerError"></p>
+      <p class="success-msg" id="registerSuccess"></p>
+    </form>
+
+    <p class="login-sub">Already have an account? 
+      <a href="index.html">Login here</a>
+    </p>
+  </div>
+
+  <script src="register.js"></script>
+</body>
+</html>

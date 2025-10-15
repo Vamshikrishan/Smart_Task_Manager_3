@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Smart Task Manager</title>
+  <link rel="icon" type="image/png" href="logo.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <header class="app-header">
+      <img src="istockphoto-1314338734-612x612.jpg" alt="Logo" class="app-logo">
+      <div class="header-text">
+        <h1>Smart Task Manager</h1>
+        <p class="sub">Plan. Prioritize. Perform. Stay productive every day 🚀</p>
+      </div>
+    </header>
+
+    <div class="top-row">
+      <img src="Gemini_Generated_Image_8pb06x8pb06x8pb0.png" alt="Preview" class="preview-img">
+      <div class="quote-card">
+        <p id="quoteText">Loading inspirational quote...</p>
+        <p id="quoteAuthor" class="quote-author"></p>
+        <button id="newQuoteBtn" class="small-btn">New Quote</button>
+      </div>
+    </div>
+
+    <!-- Controls: form + filter/sort + progress -->
+    <div class="controls">
+      <form id="taskForm" class="task-input">
+        <input type="text" id="taskName" placeholder="Enter task name">
+        <input type="date" id="taskDeadline">
+        <select id="taskPriority">
+          <option value="">Priority</option>
+          <option value="High">High</option>
+          <option value="Medium">Medium</option>
+          <option value="Low">Low</option>
+        </select>
+        <button id="addTaskBtn" type="submit">Add Task</button>
+      </form>
+
+      <div class="filter-row">
+        <div class="filter-group">
+          <label>Filter:</label>
+          <select id="statusFilter">
+            <option value="all">All</option>
+            <option value="pending">Pending</option>
+            <option value="completed">Completed</option>
+          </select>
+
+          <select id="priorityFilter">
+            <option value="all">All Priorities</option>
+            <option value="High">High</option>
+            <option value="Medium">Medium</option>
+            <option value="Low">Low</option>
+          </select>
+        </div>
+
+        <div class="filter-group">
+          <label>Sort:</label>
+          <select id="sortBy">
+            <option value="deadline-asc">Deadline ↑</option>
+            <option value="deadline-desc">Deadline ↓</option>
+            <option value="priority-desc">Priority (High → Low)</option>
+            <option value="priority-asc">Priority (Low → High)</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="progress-wrap">
+        <div class="progress-label">Progress</div>
+        <div class="progress-bar-outer">
+          <div id="progressBar" class="progress-bar-inner" style="width:0%"></div>
+        </div>
+        <div id="progressText" class="progress-text">0%</div>
+      </div>
+
+      <p id="errorMsg" class="error-msg"></p>
+      <p id="successMsg" class="success-msg"></p>
+    </div>
+
+    <!-- Task list -->
+    <ul id="taskList" class="task-list"></ul>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
